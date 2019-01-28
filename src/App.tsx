@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import Button from './components/button';
 
 class App extends Component {
+  onClick(e: React.MouseEvent<HTMLDivElement>){
+    const div = e.currentTarget
+    console.log(div.style.width)
+  }
   render() {
     return (
       <div className="App">
-        hi 
+        <Button xxx="hi" onClick={this.onClick}>你好</Button>
       </div>
     );
   }
